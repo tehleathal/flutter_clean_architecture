@@ -14,8 +14,10 @@ class AppTheme {
     light = light ??
         ThemeData(
           brightness: Brightness.light,
-          primarySwatch: AppColors.teal,
-          bottomAppBarColor: Colors.white,
+          colorScheme: ColorScheme.fromSwatch(
+            primarySwatch: AppColors.teal,
+            brightness: Brightness.light,
+          ),
           scaffoldBackgroundColor: const Color.fromARGB(255, 222, 255, 252),
           appBarTheme: const AppBarTheme(
             titleTextStyle: TextStyle(
@@ -51,7 +53,10 @@ class AppTheme {
     dark = dark ??
         ThemeData(
           brightness: Brightness.dark,
-          primarySwatch: Colors.yellow,
+          colorScheme: ColorScheme.fromSwatch(
+            primarySwatch: Colors.yellow,
+            brightness: Brightness.dark,
+          ),
           buttonTheme: const ButtonThemeData(
             textTheme: ButtonTextTheme.primary,
             buttonColor: Colors.white,
